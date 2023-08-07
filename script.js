@@ -1,15 +1,15 @@
-let calculation = '';
+let calculation = localStorage.getItem('calculation') || '';
 let result = document.querySelector('.js-result')
 
-// Function to display the calculation
-function displayCalculation() {
-  result.innerHTML = calculation
-}
+// Display the calculation when the webpage loads
+displayCalculation()
 
-// Function to updating the calculation
+
+// Function for updating the calculation
 function updateCalculation(value) {
   calculation += value;
 
+  saveCalculate()
   displayCalculation()
 }
 
@@ -17,6 +17,7 @@ function updateCalculation(value) {
 function calculateNumber() {
   calculation = eval(calculation)
 
+  saveCalculate()
   displayCalculation()
 }
 
@@ -24,5 +25,17 @@ function calculateNumber() {
 function clearCalculate() {
   calculation = '';
 
+  saveCalculate()
   displayCalculation()
+}
+
+// Function to save the calculation on a localstorage
+function saveCalculate() {
+  localStorage.setItem('calculation', calculation)
+
+}
+
+// Function to display the calculation
+function displayCalculation() {
+  result.innerHTML = calculation
 }
