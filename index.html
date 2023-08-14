@@ -6,53 +6,56 @@
   <title>Calculation App</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="light-mode">
+
+
   <main>
+  <header class="logo">Calculator</header>
+
+      <!-- Header -->
     <div class="container">
       <p class="js-result"></p>
 
       <section>
         <!-- First row -->
         <div>
-          <button onclick="clearCalculate()" class="calculator-button orange-btn">AC</button>
-          <button onclick="updateCalculation(' ( ')" class="calculator-button orange-btn">(</button>
-          <button onclick="updateCalculation(' ) ')" class="calculator-button orange-btn">)</button>
-          <button onclick="updateCalculation(' / ')" class="calculator-button orange-btn">/</button>
+          <button onclick="updateCalculation(' ( ')" class="calculator-button">(</button>
+          <button onclick="updateCalculation(' ) ')" class="calculator-button">)</button>
+          <button onclick="backspace()" class="calculator-button">←</button>
+          <button onclick="clearCalculate()" class="calculator-button">AC</button>
         </div>
         <!-- Second row -->
         <div>
-          <button onclick="updateCalculation('7')" class="calculator-button gray-btn">7</button>
-          <button onclick="updateCalculation('8')" class="calculator-button gray-btn">8</button>
-          <button onclick="updateCalculation('9')" class="calculator-button gray-btn">9</button>
-          <button onclick="updateCalculation(' * ')" class="calculator-button orange-btn">*</button>
+          <button onclick="updateCalculation(' * ')" class="calculator-button">*</button>
+          <button onclick="updateCalculation('7')" class="calculator-button">7</button>
+          <button onclick="updateCalculation('8')" class="calculator-button">8</button>
+          <button onclick="updateCalculation('9')" class="calculator-button">9</button>
         </div>
         <!-- Third row -->
         <div>
-          <button onclick="updateCalculation('4')" class="calculator-button gray-btn">4</button>
-          <button onclick="updateCalculation('5')" class="calculator-button gray-btn">5</button>
-          <button onclick="updateCalculation('6')" class="calculator-button gray-btn">6</button>
-          <button onclick="updateCalculation(' - ')" class="calculator-button orange-btn">-</button>
+          <button onclick="updateCalculation(' - ')" class="calculator-button">-</button>
+          <button onclick="updateCalculation('4')" class="calculator-button">4</button>
+          <button onclick="updateCalculation('5')" class="calculator-button">5</button>
+          <button onclick="updateCalculation('6')" class="calculator-button">6</button>
         </div>
         <!-- Fouth row -->
         <div>
-          <button onclick="updateCalculation('1')" class="calculator-button gray-btn">1</button>
-          <button onclick="updateCalculation('2')" class="calculator-button gray-btn">2</button>
-          <button onclick="updateCalculation('3')" class="calculator-button gray-btn">3</button>
-          <button onclick="updateCalculation(' + ')" class="calculator-button orange-btn">+</button>
+          <button onclick="updateCalculation(' + ')" class="calculator-button">+</button>
+          <button onclick="updateCalculation('1')" class="calculator-button">1</button>
+          <button onclick="updateCalculation('2')" class="calculator-button">2</button>
+          <button onclick="updateCalculation('3')" class="calculator-button">3</button>
         </div>
         <!-- Firth row -->
         <div>
-          <button onclick="updateCalculation('.')" class="calculator-button gray-btn">.</button>
-          <button onclick="updateCalculation('0')" class="calculator-button gray-btn">0</button>
+          <button onclick="updateCalculation(' / ')" class="calculator-button">/</button>
+          <button onclick="updateCalculation('.')" class="calculator-button">.</button>
+          <button onclick="updateCalculation('0')" class="calculator-button">0</button>
           <button onclick="calculateNumber()" class="calculator-button equal-btn">=</button>
-
-          <button onclick="updateCalculation('^')" class="calculator-button gray-btn">0</button>
-
         </div>
       </section>
     </div>
   </main> 
-  
+
   <script src="script.js"></script>
 </body>
 </html>

@@ -13,6 +13,18 @@ function updateCalculation(value) {
   displayCalculation()
 }
 
+// Function to check if a character is an operator
+function isOperator(char) {
+  return ['+', '-', '*', '/', '%'].includes(char);
+}
+
+// Function to perform backspace
+function backspace() {
+  calculation = calculation.slice(0, -1); // Remove the last character
+  saveCalculate();
+  displayCalculation();
+}
+
 // Function to calculate the result
 function calculateNumber() {
   calculation = eval(calculation)
